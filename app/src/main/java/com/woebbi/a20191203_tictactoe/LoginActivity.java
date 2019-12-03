@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             lAButtonSend = findViewById(R.id.loginActivityButtonSend);
             lAButtonAbort = findViewById(R.id.loginActivityButtonAbort);
 
-            lAButtonSend.setOnClickListener((this);
+            lAButtonSend.setOnClickListener(this);
             lAButtonAbort.setOnClickListener(this);
         }else{
             setContentView(R.layout.activity_login);
