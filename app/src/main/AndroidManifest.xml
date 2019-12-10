@@ -12,13 +12,15 @@
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainMenuActivity"/>
+        <activity android:name=".GameActivity"/>
+        <activity android:name=".HighscoreActivity"/>
+        <activity android:name=".SettingsActivity"/>
+        <activity android:name=".AboutActivity"/>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
