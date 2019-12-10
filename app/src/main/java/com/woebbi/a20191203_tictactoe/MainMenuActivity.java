@@ -1,6 +1,7 @@
 package com.woebbi.a20191203_tictactoe;
 
 import android.content.Intent;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -9,7 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.appcompat.widget.LinearLayoutCompat;
-import androidx.core.widget.TextViewCompat;
+
 
 
 public class MainMenuActivity extends AppCompatActivity implements View.OnClickListener {
@@ -20,9 +21,7 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
     private AppCompatButton mmHighscore;
     private AppCompatButton mmSettings;
     private AppCompatButton mmAbout;
-    //private TextViewCompat mmHeadline;
     private TextView mmHeadline;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,16 +48,23 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
         switch (view.getId()) {
             case R.id.mmStart: //START BUTTON
                 Toast.makeText(this, "Start", Toast.LENGTH_LONG).show();
-                Intent is = new Intent(this,GameActivity.class);
+                Intent nig = new Intent(this,GameActivity.class);
+                startActivity(nig);
                 break;
             case R.id.mmHighscore: //Highscore BUTTON
                 Toast.makeText(this, "Highscore", Toast.LENGTH_LONG).show();
+                Intent nih = new Intent(this,HighscoreActivity.class);
+                startActivity(nih);
                 break;
             case R.id.mmSettings: //Settings BUTTON
                 Toast.makeText(this, "Settings", Toast.LENGTH_LONG).show();
+                Intent nis = new Intent(this, SettingsActivity.class);
+                startActivity(nis);
                 break;
             case R.id.mmAbout: //About BUTTON
                 Toast.makeText(this, "About", Toast.LENGTH_LONG).show();
+                Intent nia = new Intent(this,AboutActivity.class);
+                startActivity(nia);
                 break;
             default:
                 Toast.makeText(this, "Default", Toast.LENGTH_LONG).show();
