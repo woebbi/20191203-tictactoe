@@ -2,7 +2,9 @@ package com.woebbi.a20191203_tictactoe;
 
 import android.content.Intent;
 
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +24,7 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
     private AppCompatButton mmSettings;
     private AppCompatButton mmAbout;
     private TextView mmHeadline;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,4 +74,6 @@ public class MainMenuActivity extends AppCompatActivity implements View.OnClickL
                 break;
         }
     }
+
+
 }

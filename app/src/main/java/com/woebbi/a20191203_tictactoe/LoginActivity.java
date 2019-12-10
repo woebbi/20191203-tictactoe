@@ -3,6 +3,7 @@ package com.woebbi.a20191203_tictactoe;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +21,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextView lAUsernameText;
     private Button lAButtonSend;
     private Button lAButtonAbort;
-    private boolean firstRun = true;
+    private boolean firstRun;
     private String validUser = "b";
     private String validPassword = "b";
 
@@ -31,7 +32,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         sp = getSharedPreferences("com.woebbi.a20191203_tictactoe", Context.MODE_PRIVATE);
 
-        firstRun = sp.getBoolean("firstrun",true);
+        firstRun = sp.getBoolean("firstRun",true);
         if(firstRun) {
             setContentView(R.layout.activity_login);
             lAPasswordInput = findViewById(R.id.loginActivityPasswordInput);
@@ -77,5 +78,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 break;
         }
     }
+
+
 
 }
